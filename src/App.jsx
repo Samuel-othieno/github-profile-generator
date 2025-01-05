@@ -67,6 +67,9 @@ function App() {
         {loading && <p>Loading...</p>}
         {error && <p>Error: {error}</p>}
         {userData && <Profile userData={userData} />}
+        <footer className="footer">
+                <p>Created by Samuel Othieno</p>
+            </footer>
       </div>
     </div>
   );

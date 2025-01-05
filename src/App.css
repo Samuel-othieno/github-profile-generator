@@ -58,3 +58,10 @@
 .App.light #theme {
     color: rgb(110, 22, 22);
 }
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}

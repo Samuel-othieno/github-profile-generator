@@ -11,12 +11,9 @@ function InputForm({ username, handleChange, handleSubmit }) {
                     type="text"
                     value={username}
                     onChange={handleChange}
-                    placeholder="Enter a GitHub username"
+                    placeholder="Enter your GitHub username"
                 />
             </form>
-            <footer className="footer">
-                <p>Created by Samuel Othieno</p>
-            </footer>
         </div>
     );
 }
