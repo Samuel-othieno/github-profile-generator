@@ -3,10 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile generator</title>
-  </head>
-  <body>
-    <div id="root"></div>
+    <title>Profile Generator</title>
+    <meta name="description" content="Generate your GitHub profile easily and quickly.">
+    <meta name="keywords" content="GitHub, profile, generator, developer, tool">
+    <meta name="author" content="Samuel Othieno">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Profile Generator">
+    <meta property="og:description" content="Generate your GitHub profile easily and quickly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://yourwebsite.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Profile Generator">
+    <meta name="twitter:description" content="Generate your GitHub profile easily and quickly.">
+    <meta name="twitter:image" content="https://yourwebsite.com/twitter-image.jpg">
+    <style>
+      body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      }
+      #root {
+      width: 100%;
+      max-width: 600px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 8px;
+      }
+    </style>
+    </head>
+    <body>
+    <div id="root" role="main"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
-</html>
+    </body>
+  </html>

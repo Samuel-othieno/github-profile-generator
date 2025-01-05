@@ -1,20 +1,61 @@
+:root {
+    --light-bg: white;
+    --dark-bg: #333;
+    --light-color: black;
+    --dark-color: white;
+    --primary-color: blue;
+    --box-shadow-light: rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    .Input-wrapper {
+        background-color: var(--dark-bg);
+        color: var(--dark-color);
+        box-shadow: 0px 0px 8px var(--box-shadow-dark);
+    }
+
+    .Input-wrapper:hover {
+        box-shadow: 0px 0px 12px var(--box-shadow-dark);
+    }
+
+    #search-icon {
+        color: var(--primary-color);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .Input-wrapper {
+        background-color: var(--light-bg);
+        color: var(--light-color);
+        box-shadow: 0px 0px 8px var(--box-shadow-light);
+    }
+
+    .Input-wrapper:hover {
+        box-shadow: 0px 0px 12px var(--box-shadow-light);
+    }
+
+    #search-icon {
+        color: var(--primary-color);
+    }
+}
+
 .Input-wrapper {
-    background-color: white;
-    color: black;
     width: 100%;
+    max-width: 600px;
     border-radius: 10px;
     height: 2.5rem;
     padding: 0 15px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    max-width: 600px;
     margin: 10px auto;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
 .Input-wrapper:hover {
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -22,9 +63,11 @@ form {
     width: 100%;
     padding: 10px;
 }
+
 form:focus {
     outline: none;
 }
+
 input {
     background-color: transparent;
     border: none;
@@ -32,10 +75,31 @@ input {
     font-size: 1.2rem;
     width: 100%;
     margin-left: 5px;
+    color: inherit;
 }
+
 input:focus {
     outline: none;
 }
+
 #search-icon {
-    color: blue;
+    color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+    .Input-wrapper {
+        height: 2rem;
+        padding: 0 10px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
 }
