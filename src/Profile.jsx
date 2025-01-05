@@ -1,16 +1,16 @@
-import React from "react";
 import "./Profile.css";
+import PropTypes from 'prop-types';
 
 function Profile({ userData }) {
   return (
     <div className="profile">
-      <img src={userData.avatar_url} alt={userData.login} />
-      <h2>
+      <img className="profile-avatar" src={userData.avatar_url} alt={userData.login} />
+      <h2 className="profile-name">
         <a href={userData.html_url} target="_blank" rel="noreferrer">
           {userData.login}
         </a>
       </h2>
-      <div className="bio-data" >
+      <div className="bio-data">
         <p>
           <i className="fas fa-users"></i> <span>Followers</span><br />{userData.followers}
         </p>
@@ -30,5 +30,18 @@ function Profile({ userData }) {
     </div>
   );
 }
+
+Profile.propTypes = {
+  userData: PropTypes.shape({
+    avatar_url: PropTypes.string.isRequired,
+    login: PropTypes.string.isRequired,
+    html_url: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    following: PropTypes.number.isRequired,
+    public_repos: PropTypes.number.isRequired,
+    location: PropTypes.string,
+    created_at: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default Profile;
